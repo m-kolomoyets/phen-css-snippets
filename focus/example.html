@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./focus.css" />
+    <style>
+      .block {
+        padding: 1rem;
+        margin-top: 1rem;
+      }
+
+      .within-block {
+        padding: 0.5rem;
+      }
+
+      .button {
+        padding: 0.25rem 0.5rem;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="block">
+        <p>Focus Primary</p>
+          <button class="button focus-primary">Focus Primary</button>
+    </div>
+    <div class="block">
+      <p>Focus within</p>
+      <div class="within-block focus-within-primary">
+          <button class="button focus-primary">Focus Primary</button>
+        </div>
+    </div>
+    <div class="block">
+      <p>Focus Primary Child</p>
+      <button class="button focus-primary-child">Focus Secondary</button>
+  </body>
+</html>

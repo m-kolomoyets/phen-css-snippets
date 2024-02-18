@@ -1,0 +1,9 @@
+.wrap {
+    --captions-gap: 2rem;
+
+    @apply flex items-start flex-wrap p-0 -mt-[calc(var(--captions-gap)/2)] w-full;
+}
+
+.wrap .item {
+    @apply mt-[var(--captions-gap)] mr-[var(--captions-gap)] ml-0;
+}

@@ -1,0 +1,10 @@
+/* !!! NOTE !!! */
+/* built-in `sr-only` class can be used too */
+
+@layer components {
+    body .visually-hidden {
+        @apply absolute h-[1px] w-[1px] m-[-1px] p-0 border-0 overflow-hidden;
+
+        clip: rect(0 0 0 0);
+    }
+}

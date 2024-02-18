@@ -1,0 +1,21 @@
+/* !!! NOTE !!! */
+/* width, height measurements and colors can vary by a project */
+/* So you are free to change it to suitable for your project */
+
+@media (hover: hover) and (pointer: fine) {
+    *::-webkit-scrollbar {
+        @apply lg:w-3 lg:h-3;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        @apply lg:bg-grey-500 lg:border-grey-500;
+    }
+
+    *::-webkit-scrollbar-track {
+        @apply lg:bg-grey-100;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        @apply lg:bg-grey-300 lg:rounded-sm lg:border-4 lg:border-grey-100;
+    }
+}

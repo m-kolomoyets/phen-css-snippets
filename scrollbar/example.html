@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scrollbar.css" />
+  </head>
+  <style>
+    .content {
+      position: relative;
+      height: 500vh;
+    }
+
+    .sticky-text {
+      display: inline-block;
+      position: sticky;
+      top: 1rem;
+      left: 100%;
+      padding: 1rem;
+      /* background-color: #fff; */
+      box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    @media (width >= 1024px) {
+      .sticky-text.desktop {
+        opacity: 1;
+      }
+
+      .sticky-text.mobile {
+        opacity: 0;
+      }
+    }
+
+    @media (width < 1024px) {
+      .sticky-text.mobile {
+        opacity: 1;
+      }
+
+      .sticky-text.desktop {
+        opacity: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="content">
+      <span class="sticky-text desktop">Custom scrollbar -> </span>
+      <span class="sticky-text mobile">Default scrollbar -> </span>
+    </div>
+  </body>
+</html>

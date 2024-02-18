@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./visually-hidden.css" />
+  </head>
+  <style>
+    .content {
+      display: flex;
+      align-items: center;
+    }
+
+    .button {
+      padding: 0.25rem 0.5rem;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button span {
+      margin-right: 0.5rem;
+    }
+
+    .button:hover {
+      background-color: rgb(250, 250, 250);
+    }
+
+    .button + .button {
+      margin-left: 1rem;
+    }
+  </style>
+  <body>
+    <main class="content">
+      <button class="button" title="Close button with visually hidden text">
+        <span>Close button without visually hidden text</span>
+        <svg
+          width="24"
+          height="24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6l12 12M6 18L18 6"
+            stroke="#000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button class="button" title="Close button with visually hidden text">
+        <span class="visually-hidden"
+          >Close button with visually hidden text</span
+        >
+        <svg
+          width="24"
+          height="24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6l12 12M6 18L18 6"
+            stroke="#000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </main>
+  </body>
+</html>
