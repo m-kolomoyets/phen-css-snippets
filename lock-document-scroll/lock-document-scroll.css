@@ -1,0 +1,5 @@
+.lock-scroll-y {
+  position: fixed;
+  inset: 0;
+  overflow-y: hidden;
+}

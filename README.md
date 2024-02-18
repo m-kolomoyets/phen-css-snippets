@@ -13,6 +13,7 @@ Here are common-use Phenomenon.Studio-style snippets to use in different project
 - Custom scrollbar styles
 - Visually hidden element styles
 - Flex-wrappable content with gaps are supported where `gap` or `flx-gap` style is not supported yet (Safari 14 hello XD)[1]
+- Lock document scroll
 
 > [1] NOTE: **Flex-wrappable content with gaps** styles are actual while `Safari v14` and `Safari for iOS v14` do not support `gap` and `flx-gap` feature.  
 > P.S. For further details look [here](https://caniuse.com/?search=flex-gap)
@@ -25,3 +26,4 @@ Here are common-use Phenomenon.Studio-style snippets to use in different project
 |focus states |✅ |✅|
 |custom scrollbar |✅ |✅|
 |flexbox wrap with gaps|✅ |✅|
+|lock document scroll y |✅ |✅|

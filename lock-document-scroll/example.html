@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./lock-document-scroll.css" />
+  </head>
+  <style>
+    .content {
+      height: 500vh;
+      padding: 1rem;
+    }
+
+    .button {
+      position: sticky;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.25rem 0.5rem;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+  <body>
+    <main class="content">
+      <button id="toggler" class="button">Toggle Scroll Lock</button>
+    </main>
+    <script>
+      const LOCK_SCROLL_Y_CLASS_NAME = "lock-scroll-y";
+      let isScrollYLocked = false;
+      let scrollTop = 0;
+
+      const documentElement = document.documentElement;
+
+      const lockScrollY = () => {
+        if (!documentElement) {
+          return;
+        }
+
+        scrollTop = documentElement.scrollTop
+          ? documentElement.scrollTop
+          : document.body.scrollTop;
+
+        requestAnimationFrame(() => {
+          documentElement.style.top = `-${scrollTop}px`;
+          documentElement.classList.add(LOCK_SCROLL_Y_CLASS_NAME);
+        });
+      };
+
+      const unlockScrollY = () => {
+        if (!documentElement) {
+          return;
+        }
+
+        const scrollY = parseInt(scrollTop.toString());
+
+        requestAnimationFrame(() => {
+          documentElement.classList.remove(LOCK_SCROLL_Y_CLASS_NAME);
+          documentElement.style.removeProperty("top");
+          documentElement.scrollTop = scrollY;
+          document.body.scrollTop = scrollY;
+        });
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const button = document.getElementById("toggler");
+
+        if (button) {
+          button.addEventListener("click", () => {
+            if (isScrollYLocked) {
+              unlockScrollY();
+            } else {
+              lockScrollY();
+            }
+
+            isScrollYLocked = !isScrollYLocked;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
