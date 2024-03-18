@@ -30,6 +30,9 @@ body .focus-within-primary:focus-within {
 
 body .focus-primary:focus:not(body .focus-primary:focus-visible) {
     --ring-width: 0;
+
+    outline: none;
+    box-shadow: none;
 }
 
 body .focus-primary-child {
