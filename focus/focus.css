@@ -13,19 +13,19 @@
 body .focus-primary:focus-visible {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 #0000;
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 rgba(0, 0, 0, 0);
 }
 
 body .focus-primary:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 #0000;
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 rgba(0, 0, 0, 0);
 }
 
 body .focus-within-primary:focus-within {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 #0000;
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 rgba(0, 0, 0, 0);
 }
 
 body .focus-primary:focus:not(body .focus-primary:focus-visible) {
@@ -38,5 +38,5 @@ body .focus-primary:focus:not(body .focus-primary:focus-visible) {
 body .focus-primary-child {
     outline: 2px solid transparent;
     outline-offset: 2px;
-    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 #0000;
+    box-shadow: var(--ring-offset-shadow), var(--ring-shadow), 0 0 rgba(0, 0, 0, 0);
 }
