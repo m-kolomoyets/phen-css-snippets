@@ -9,7 +9,7 @@
     --scrollbar-thumb-color-hover: rgb(116 130 144);
 }
 
-@media (hover: hover) and (pointer: fine) and (width>=1024px) {
+@media (hover: hover) and (pointer: fine) {
     *::-webkit-scrollbar {
         width: var(--scrollbar-size);
         height: var(--scrollbar-size);
